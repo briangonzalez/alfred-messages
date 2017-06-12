@@ -1,7 +1,7 @@
 use AppleScript version "2.4" -- Yosemite (10.10) or later
 use scripting additions
 
--- set searchQuery to "Stef"
+-- set searchQuery to "Brian"
 
 set foundBuddies to {}
 tell application "Messages"

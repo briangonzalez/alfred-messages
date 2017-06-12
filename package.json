@@ -31,9 +31,8 @@
   "dependencies": {
     "alfy": "^0.6.0",
     "imessage": "^0.1.5",
-    "node-osascript": "^2.0.0",
-    "osa-imessage": "^2.1.1",
-    "osa2": "^0.2.1"
+    "lodash": "^4.17.4",
+    "node-osascript": "^2.0.0"
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",

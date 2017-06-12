@@ -1,7 +1,7 @@
 const alfy = require('alfy');
 const helpers = require('./lib/applescript-helpers.js');
 
-const input = (alfy.input || 'Laura message here').split(' ');
+const input = (alfy.input || 'brian this is a message').split(' ');
 const query = input[0];
 const message = input.slice(1, input.length).join(' ');
 
@@ -16,8 +16,8 @@ const message = input.slice(1, input.length).join(' ');
 
 	alfy.output(output.map(buddy => {
 		return {
-			title: `${buddy.name} (${buddy.handle})`,
-			subtitle: message ? `Send message: ${message || ''}` : 'Type a message',
+			title: buddy.name,
+			subtitle: message ? `Send "${message}" to ${buddy.handle}` : `Type to send message to ${buddy.handle})`,
 			arg: JSON.stringify({
 				handle: buddy.handle,
 				name: buddy.name,
