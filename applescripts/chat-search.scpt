@@ -1,12 +1,12 @@
 use AppleScript version "2.4" -- Yosemite (10.10) or later
 use scripting additions
 
--- set searchQuery to "Stef"
+-- set searchQuery to "Wai"
 
 set foundChats to {}
 tell application "Messages"
 	set chatList to (every text chat)
-	-- set chatList to (every chat whose id equals "SMS;-;+15627619005")
+	-- set chatList to (every chat whose id equals "SMS;-;+1555555555")
 
 	repeat with theChat in chatList
     try
