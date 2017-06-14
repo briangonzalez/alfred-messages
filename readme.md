@@ -2,6 +2,9 @@
 
 > Send messages through Alfred
 
+## Demo
+
+![demo of alfred messages](https://user-images.githubusercontent.com/659829/27117260-a7bcc706-508a-11e7-80f9-d3db4360d19c.gif)
 
 ## Install
 
