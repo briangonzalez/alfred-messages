@@ -2,10 +2,6 @@
 
 > Send messages through Alfred
 
-## Demo
-
-![demo of alfred messages](https://user-images.githubusercontent.com/659829/27117260-a7bcc706-508a-11e7-80f9-d3db4360d19c.gif)
-
 ## Install
 
 ```
@@ -17,7 +13,11 @@ $ npm install --global alfred-messages
 
 ## Usage
 
-In Alfred, type `m`, <kbd>Enter</kbd>, and your query.
+In Alfred, type `m`, your query, then your message.
+
+## Demo
+
+![demo of alfred messages](https://user-images.githubusercontent.com/659829/27117260-a7bcc706-508a-11e7-80f9-d3db4360d19c.gif)
 
 
 ## License
