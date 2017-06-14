@@ -1,6 +1,6 @@
 {
   "name": "alfred-messages",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Send messages through Alfred",
   "license": "MIT",
   "repository": "briangonzalez/alfred-imessage",
