@@ -31,6 +31,7 @@
   "dependencies": {
     "alfy": "^0.6.0",
     "imessage": "^0.1.5",
+    "jfs": "^0.2.6",
     "lodash": "^4.17.4",
     "node-osascript": "^2.0.0"
   },
