@@ -17,12 +17,6 @@
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
   },
-  "files": [
-    "index.js",
-    "message.js",
-    "icon.png",
-    "info.plist"
-  ],
   "keywords": [
     "alfred",
     "workflow",
