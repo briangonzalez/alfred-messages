@@ -17,7 +17,7 @@ const message = input.slice(1, input.length).join(' ');
 	alfy.output(output.map(buddy => {
 		return {
 			title: buddy.name,
-			subtitle: message ? `Send "${message}" to ${buddy.handle}` : `Type to send message to ${buddy.handle})`,
+			subtitle: message ? `Send "${message}" to ${buddy.handle}` : `Type to send message to ${buddy.handle}`,
 			arg: JSON.stringify({
 				handle: buddy.handle,
 				name: buddy.name,
