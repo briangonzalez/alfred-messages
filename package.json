@@ -1,9 +1,9 @@
 {
   "name": "alfred-messages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Send messages through Alfred",
   "license": "MIT",
-  "repository": "briangonzalez/alfred-imessage",
+  "repository": "briangonzalez/alfred-messages",
   "author": {
     "name": "Brian Gonzalez",
     "email": "me@briangonzalez.org",

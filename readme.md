@@ -1,4 +1,4 @@
-# alfred-messages [![Build Status](https://travis-ci.org/briangonzalez/alfred-imessage.svg?branch=master)](https://travis-ci.org/briangonzalez/alfred-messages)
+# alfred-messages [![Build Status](https://travis-ci.org/briangonzalez/alfred-messages.svg?branch=master)](https://travis-ci.org/briangonzalez/alfred-messages)
 
 > Send messages through Alfred
 
