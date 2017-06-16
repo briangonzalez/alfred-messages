@@ -8,6 +8,8 @@
 $ npm install --global alfred-messages
 ```
 
+You can also find the workflow for direct download in the [Releases](https://github.com/briangonzalez/alfred-messages/releases) section of this repo.
+
 *Requires [Node.js](https://nodejs.org) 4+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
 
 
