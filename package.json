@@ -1,6 +1,6 @@
 {
   "name": "alfred-messages",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Send messages through Alfred",
   "license": "MIT",
   "repository": "briangonzalez/alfred-messages",
