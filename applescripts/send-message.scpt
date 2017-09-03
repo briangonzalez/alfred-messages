@@ -1,3 +1,4 @@
+-- THIS FILE IS NO LONGER USED.
 
 -- set theHandle to "+15555555555"
 -- set textMessage to "Hello!"

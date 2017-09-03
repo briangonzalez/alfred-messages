@@ -1,17 +1,17 @@
-const alfy = require('alfy');
-const helpers = require('./lib/applescript-helpers.js');
+const alfy = require('alfy')
+const helpers = require('./lib/applescript-helpers.js')
 
-const input = (alfy.input || 'brian this is a message').split(' ');
-const query = input[0];
+const input = (alfy.input || 'brian this is a message').split(' ')
+const query = input[0]
 const message = input.slice(1, input.length).join(' ').trim();
 
 (async () => {
-  let output = await helpers.buddySearch(query);
+  let output = await helpers.buddySearch(query)
   if (!output) {
     return alfy.output([{
       title: `No results found for ${query}`,
       subtitle: 'Please try another query'
-    }]);
+    }])
   }
 
   alfy.output(output.map(buddy => {
@@ -31,5 +31,5 @@ const message = input.slice(1, input.length).join(' ').trim();
         message
       })
     }
-  }));
+  }))
 })()

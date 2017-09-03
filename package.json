@@ -14,6 +14,7 @@
   },
   "scripts": {
     "test": "xo && ava",
+    "lint": "eslint . --fix",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
   },
@@ -27,11 +28,17 @@
     "imessage": "^0.1.5",
     "jfs": "^0.2.6",
     "lodash": "^4.17.4",
-    "node-osascript": "^2.0.0"
+    "node-osascript": "^2.0.0",
+    "osa-imessage": "^2.1.1"
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",
     "ava": "^0.18.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "xo": "^0.17.0"
   }
 }
