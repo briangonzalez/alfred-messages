@@ -1,6 +1,6 @@
 {
   "name": "alfred-messages",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Send messages through Alfred",
   "license": "MIT",
   "repository": "briangonzalez/alfred-messages",
@@ -18,18 +18,14 @@
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
   },
-  "keywords": [
-    "alfred",
-    "workflow",
-    "alfy"
-  ],
+  "keywords": ["alfred", "workflow", "alfy"],
   "dependencies": {
     "alfy": "^0.6.0",
     "imessage": "^0.1.5",
     "jfs": "^0.2.6",
     "lodash": "^4.17.4",
     "node-osascript": "^2.0.0",
-    "osa-imessage": "^2.1.1"
+    "osa-imessage": "briangonzalez/osa-imessage#better-debug"
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",
