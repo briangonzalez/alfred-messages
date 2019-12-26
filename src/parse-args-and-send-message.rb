@@ -7,6 +7,6 @@ message.strip!
 
 puts "No message provided" if message == ""
 
-system("osascript ./src/send-message.scpt \"#{phoneOrEmail}\" \"#{message}\"")
+system("osascript ./src/send-message.scpt \"#{phoneOrEmail}\" '#{message}'")
 
 puts "#{phoneOrEmail} sent '#{message}'" if message != ""

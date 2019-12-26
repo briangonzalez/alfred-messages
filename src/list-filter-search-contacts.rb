@@ -4,5 +4,8 @@ query = ARGV.first.split(' ')[0]
 message = ARGV.first.split(' ')
 message.shift
 message = message.join ' '
+message.gsub!('"', '\"')
+message.gsub!("'", "\'")
 
-system("swift ./src/contacts.swift #{query} \"#{message}\"")
+cmd = "swift ./src/contacts.swift #{query} '#{message}'"
+system(cmd)
