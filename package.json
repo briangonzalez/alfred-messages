@@ -1,0 +1,28 @@
+{
+  "name": "alfred-messages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": {
+    "name": "Brian Gonzalez",
+    "email": "me@briangonzalez.org",
+    "url": "https://www.briangonzalez.org"
+  },
+  "repository": "briangonzalez/alfred-messages",
+  "scripts": {
+    "link-to-alfred": "alfred-link",
+    "unlink-from-alfred": "alfred-unlink",
+    "postinstall": "yarn link-to-alfred",
+    "preuninstall": "yarn unlink-from-alfred"
+  },
+  "keywords": [
+    "alfred",
+    "workflow",
+    "imessage",
+    "messages"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "alfred-link": "0.3.1"
+  }
+}
