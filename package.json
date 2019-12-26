@@ -1,6 +1,6 @@
 {
   "name": "alfred-messages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "author": {
@@ -22,7 +22,7 @@
     "messages"
   ],
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "alfred-link": "0.3.1"
   }
 }
