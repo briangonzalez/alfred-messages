@@ -11,7 +11,7 @@ $ npm install --global alfred-messages    # old school
 
 or...
 
-Grab the [latest release](https://github.com/briangonzalez/alfred-messages/releases) rom Github.
+Grab the [latest release](https://github.com/briangonzalez/alfred-messages/releases) from Github.
 
 ## Usage
 
@@ -22,6 +22,12 @@ eg.
 ```
 m osc hey oscar, wassssup?
 ```
+
+### Variables
+
+| Options            | Type     | Description                                 |
+| :----------------- | -------- | ------------------------------------------- |
+| `af_exclude_email` | `string` | If email types should be excluded from list |
 
 ## Demo
 
