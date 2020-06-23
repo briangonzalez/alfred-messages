@@ -20,8 +20,8 @@ struct AlfredItem {
   func toJSON() -> String {
     return "{" +
       "\"title\": \"\(self.title)\"," +
-      "\"subtitle\": \"\(self.subtitle)\"," +
-      "\"arg\": \"\(self.arg)\""  +
+      "\"subtitle\": \"\(self.subtitle.replacingOccurrences(of: "\"", with: "\\\""))\"," +
+      "\"arg\": \"\(self.arg.replacingOccurrences(of: "\"", with: "\\\""))\""  +
     "}"
   }
 }

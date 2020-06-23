@@ -4,11 +4,9 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.briangonzalez.alfred-messages</string>
-	<key>category</key>
-	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>A60AA871-2444-442A-91AE-5F4151B639D4</key>
+		<key>DE2C1397-FF3B-440C-85D1-18426DBF9416</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -35,7 +33,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>A60AA871-2444-442A-91AE-5F4151B639D4</string>
+				<string>DE2C1397-FF3B-440C-85D1-18426DBF9416</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -65,6 +63,64 @@
 	<string>Messages</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Message sent</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>DF2C92C8-ED1E-43D6-82DA-DB936069F5DB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>function run(argv) {
+  var parameters = argv[0].split("•••");
+  if (parameters.length &gt;= 3) {
+    var emailOrPhone = parameters[1];
+    var message = parameters[2];
+  
+    var iMessage = Application("Messages");
+    var services = iMessage.services();
+    var service = services.find(function (service) {
+      return service.serviceType() == "iMessage";
+    });
+       iMessage.send(message, {to: service.buddies[emailOrPhone]}) 
+  }
+  Application("System Events").processes.whose({name: "Messages"})[0].visible = false
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>src/send-message.js</string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DE2C1397-FF3B-440C-85D1-18426DBF9416</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -123,59 +179,6 @@ system("swift ./src/contacts.swift #{query} \"#{message}\"")</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>name = ARGV.first.split('•••')[0]
-phoneOrEmail = ARGV.first.split('•••')[1]
-message = ARGV.first.split('•••')[2] || ""
-message.strip!
-
-puts "No message provided" if message == ""
-
-system("osascript ./src/send-message.scpt \"#{phoneOrEmail}\" \"#{message}\"")
-
-puts "#{phoneOrEmail} sent '#{message}'" if message != ""</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>src/parse-args-and-send-message.rb</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>A60AA871-2444-442A-91AE-5F4151B639D4</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Message sent</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>DF2C92C8-ED1E-43D6-82DA-DB936069F5DB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
@@ -215,23 +218,23 @@ puts "#{phoneOrEmail} sent '#{message}'" if message != ""</string>
 		<key>7919BBA2-1BD9-4E9D-AF6F-32C3E84552B7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>270</integer>
+			<integer>265</integer>
 			<key>ypos</key>
-			<integer>240</integer>
-		</dict>
-		<key>A60AA871-2444-442A-91AE-5F4151B639D4</key>
-		<dict>
-			<key>xpos</key>
-			<integer>315</integer>
-			<key>ypos</key>
-			<integer>70</integer>
+			<integer>425</integer>
 		</dict>
 		<key>DC44F9DF-FC95-4D20-B903-245929AF1FBC</key>
 		<dict>
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>240</integer>
+			<integer>410</integer>
+		</dict>
+		<key>DE2C1397-FF3B-440C-85D1-18426DBF9416</key>
+		<dict>
+			<key>xpos</key>
+			<integer>315</integer>
+			<key>ypos</key>
+			<integer>70</integer>
 		</dict>
 		<key>DF2C92C8-ED1E-43D6-82DA-DB936069F5DB</key>
 		<dict>
@@ -251,7 +254,7 @@ puts "#{phoneOrEmail} sent '#{message}'" if message != ""</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.1.1</string>
 	<key>webaddress</key>
 	<string>https://www.briangonzalez.org</string>
 </dict>
