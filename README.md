@@ -11,7 +11,7 @@ $ npm install --global alfred-messages    # old school
 
 or...
 
-Grab the [latest release](https://github.com/briangonzalez/alfred-messages/releases) rom Github.
+Grab the [latest release](https://github.com/briangonzalez/alfred-messages/releases) from Github.
 
 ## Usage
 
