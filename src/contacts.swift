@@ -1,4 +1,8 @@
 import AddressBook
+import Foundation
+
+let env = ProcessInfo.processInfo.environment;
+let excludeEmail = env["af_exclude_email"];
 
 extension Array where Element: Equatable {
     mutating func removeDuplicates() {
@@ -20,8 +24,8 @@ struct AlfredItem {
   func toJSON() -> String {
     return "{" +
       "\"title\": \"\(self.title)\"," +
-      "\"subtitle\": \"\(self.subtitle)\"," +
-      "\"arg\": \"\(self.arg)\""  +
+      "\"subtitle\": \"\(self.subtitle.replacingOccurrences(of: "\"", with: "\\\""))\"," +
+      "\"arg\": \"\(self.arg.replacingOccurrences(of: "\"", with: "\\\""))\""  +
     "}"
   }
 }
@@ -73,17 +77,19 @@ for person in found {
     let emailsProperty = person.value(forProperty: kABEmailProperty) as? ABMultiValue
     let phonesProperty = person.value(forProperty: kABPhoneProperty) as? ABMultiValue
 
-    if let emails = emailsProperty {
-        for j in 0..<emails.count() {
-            let email = emails.value(at: j) as? String ?? ""
-
-            let a = AlfredItem(
-              title: "\(firstName) \(lastName) • \(email)",
-              subtitle: displayMsg,
-              arg: "\(firstName) \(lastName)•••\(email)•••\(msg)"
-            )
-
-            formattedContacts.append(a)
+    if excludeEmail != "true" {
+        if let emails = emailsProperty  {
+            for j in 0..<emails.count() {
+                let email = emails.value(at: j) as? String ?? ""
+    
+                let a = AlfredItem(
+                  title: "\(firstName) \(lastName) • \(email)",
+                  subtitle: displayMsg,
+                  arg: "\(firstName) \(lastName)•••\(email)•••\(msg)"
+                )
+    
+                formattedContacts.append(a)
+            }
         }
     }
 

@@ -23,6 +23,12 @@ eg.
 m osc hey oscar, wassssup?
 ```
 
+### Variables
+
+| Options            | Type     | Description                                 |
+| :----------------- | -------- | ------------------------------------------- |
+| `af_exclude_email` | `string` | If email types should be excluded from list |
+
 ## Demo
 
 ![demo of alfred messages](https://user-images.githubusercontent.com/659829/27117260-a7bcc706-508a-11e7-80f9-d3db4360d19c.gif)
